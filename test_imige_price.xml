@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2020-12-23 17:20">
+	<shop>
+		<name>Центр полиграфии &quot;Имидж&quot;</name>
+		<company>ООО &quot;Имидж&quot;</company>
+		<url>https://imige.ru</url>
+		<platform>PHP</platform>
+		<version>7</version>
+		<agency>ООО &quot;Имидж&quot;</agency>
+		<email>zakaz@imige.ru</email>
+		<currencies>
+			<currency id="RUR" rate="1"/>
+		</currencies>
+		<delivery-options> 
+			<option cost="300" days="1-3"/> <!-- Для всех товаров курьерская доставка 1-3 дня, стоимость - 300 рублей -->
+		</delivery-options>
+		<categories>
+			<category id="188945457">Папки</category>
+			<category id="1107663002" parentId="188945457">Адресные папки</category>
+		</categories>
+	<offers>
+<!-- Для товаров со статусом "Срок поставки 10 дней" в 1С -->
+		<offer id="5755" available="true">
+			<name>Адресная папка А4 мягкая &quot;На подпись&quot;,бумвинил бордо, корешок 100 мм</name>
+			<url>https://imige.ru/product/adresnaya-papka-a4-myagkaya-na-podpis-bumvinil-bordo-koreshok-100-mm</url>
+			<price>350</price>
+			<currencyId>RUR</currencyId>
+			<categoryId>1107663002</categoryId>
+			<picture>https://imige.ru/files/84393b4d-c5a0-11ea-811e-0050569b2c8d-6fa06c0c-2ee8-11eb-811e-0050569b2c8d-1.jpg</picture>
+			<delivery>1</delivery>
+			<delivery-options>
+				<option cost="300" days="10-12"/> <!-- Курьерская доставка за 300 рублей, через "от Срок поставки в 1С - до Срок поставки в 1С + 2 дня" -->
+			</delivery-options>
+			<pickup>1</pickup>
+			<pickup-options>
+				<option cost="0" days="11"/> <!-- Самовывоз бесплатно, через "Срок поставки в 1С" + 1 день -->
+			</pickup-options>
+			<store>0</store> <!-- Товар нельзя купить в торговом зале без предварительного заказа (Можно не ставить, если нет торгового зала) -->
+			<vendor>ООО &quot;Имидж&quot;</vendor>
+			<description></description>
+		</offer>
+<!-- Для товаров со статусом "Товар в наличии" в 1С - явно не указываем, используется общая, можно убрать общую, писать здесь-->
+		<offer id="5756" available="true">
+			<name>Алфавит &quot;Животный мир&quot; формат А2 (10 шт в упаковке)</name>
+			<url>https://imige.ru/product/alfavit-zhivotnyy-mir-format-a2-10-sht-v-upakovke</url>
+			<price></price>
+			<currencyId>RUR</currencyId>
+			<categoryId>1107663002</categoryId>
+			<picture>https://imige.ru/files/2a952834-b55b-11ea-811e-0050569b2c8d-68f96e2d-c511-11ea-811e-0050569b2c8d-1.jpg</picture>
+			<delivery>1</delivery>
+			<pickup>1</pickup>
+			<vendor>ООО &quot;Имидж&quot;</vendor>
+			<description></description>
+		</offer>
+	</offers>
+	</shop>
+</yml_catalog>

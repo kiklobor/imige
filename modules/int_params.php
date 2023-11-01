@@ -358,7 +358,7 @@ if (!isset($h1_group_name)) $h1_group_name = "";
                     echo $cell;
                 }
 		    }
-        else echo 'Пока нетобразцов.';
+        else echo 'Пока нет образцов.';
 		?>
 
 		</div>

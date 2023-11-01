@@ -296,14 +296,14 @@ if (!isset($h1_group_name)) $h1_group_name = "";
 ?>
 
 <div class="bread">
-<a href="/">Главная</a> / <a href="/params/">Параметры</a><!--mcatalog?target=products--> / <?=$link?>
+<a href="/">Главная</a> / <a href="/params/">Образцы</a><!--mcatalog?target=products--> / <?=$link?>
 </div>
 
 <div class="contentContainer col-12 col-md-9 p-0">
 	<div class="catalog w-100">
 	    <h1 itemprop="name"><?=$h1_group_name?></h1>
 		<div class="pagesBlock">
-			Всего услуг: <b><?=$productsCountAll?></b>
+			Всего образцов: <b><?=$productsCountAll?></b>
 		</div>
 
 		<div class="catalogBlock row no-gutters align-content-md-stretch">
@@ -358,7 +358,7 @@ if (!isset($h1_group_name)) $h1_group_name = "";
                     echo $cell;
                 }
 		    }
-        else echo 'Пока нет услуг.';
+        else echo 'Пока нетобразцов.';
 		?>
 
 		</div>

@@ -206,7 +206,7 @@ if ($productsCountAll>0) {
 	      usort($images,'imgSort');
 	      $cellsPrepare['photo']=$images[0];
 	      //die($cellsPrepare['photo']); files/e7e1a49c-cc50-11e7-9d9d-00505601212a-8396d8a2-763a-11e9-811a-0050569b570f-1.jpg
-	      $cellsPrepare['photo'] = \Utilsw\Image\Image::getResizeImg($cellsPrepare['photo'], 'services');
+	      $cellsPrepare['photo'] = \Utilsw\Image\Image::getResizeImg($cellsPrepare['photo'], 'params');
 	  } else $cellsPrepare['photo']=NOPH;
 
 		$cells[$i]=$cellsPrepare;

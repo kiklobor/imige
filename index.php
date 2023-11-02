@@ -505,7 +505,7 @@ switch($urlArr[1]) {
 	
   //---------------- params
     case 'params':
-      if (!($categoryservices->checkurlpath($urlArrf)) AND ($page == 'params')) {
+      if (!($categoryparams->checkurlpath($urlArrf)) AND ($page == 'params')) {
         $is404 = TRUE;
       }
       break;

@@ -56,7 +56,7 @@ else {
         case 'services':$page='services';break;
         case 'service':$page='service';break;
         case 'params':$page='params';break;
-		case 'param':$page='param';break;
+		    case 'param':$page='param';break;
         default:$page='404';break;
     	/*
     	case("delivery"):require("modules/int_deliveryAndPayment.php");break;
@@ -474,15 +474,8 @@ switch($urlArr[1]) {
         $is404 = TRUE;
         break;
       }
-      /*
-      $productUrl=$urlArr[2];
-      $query="SELECT p.* FROM products p,groups g,subgroups sg WHERE p.parent=sg.uID AND sg.parent=g.uID AND g.ind=0 AND p.url=?s AND p.active=1 LIMIT 1";
-      $product=$go->getRow($query,$productUrl);
-      if (is_null($product) OR $product===FALSE) {  //OR $group['url'] != '') {
-        $is404 = TRUE;
-      }
-      /**/
     break;
+    //---------------- services
     case 'services':
       if (!($categoryservices->checkurlpath($urlArrf)) AND ($page == 'services')) {
         $is404 = TRUE;
@@ -508,12 +501,36 @@ switch($urlArr[1]) {
         $is404 = TRUE;
         break;
       }
-      //die('service');
-      // var_dump($is404);
-      // die($is404);
     break;
 	
-	
+  //---------------- params
+    case 'params':
+      if (!($categoryservices->checkurlpath($urlArrf)) AND ($page == 'params')) {
+        $is404 = TRUE;
+      }
+      break;
+    case 'param':
+      if (count($urlArrf)>2) {
+      //if (count($urlArr)>4) {
+       $is404 = TRUE;
+       break;
+      }
+
+      $paramUrl=$urlArr[2];
+      $query="SELECT s.* FROM params s WHERE s.url=?s AND s.active=1 LIMIT 1";
+      $param=$go->getRow($query,$paramUrl);
+      if (is_null($param) OR $param===FALSE) {  //OR $group['url'] != '') {
+        $is404 = TRUE;
+        break;
+      }
+
+      //маразм, но на всякий случай
+      if (count($categoryparams->getcatbyuid($param['parent'])) == 0) {
+        $is404 = TRUE;
+        break;
+      }
+    break;	
+
     //case 'sample':break;
 
     default:break;

@@ -132,20 +132,20 @@ if ($go->affectedRows()==1) {
     			$link='';
     			while (count($catpath)<>0) {
     				$cat = $category->getlastcat($catpath);
-    				$link='<a href="/catalog/'.implode('/', $cat['catpath']).'/">'.$cat['Name'].'</a> / '.$link;
+    				$link='<a href="/catalog/'.implode('/', $cat['catpath']).'/">'.$cat['Name'].'</a>'.$link;
     				$cat = array_pop($catpath);
     			}
           $crumbs=$link;
           /**/
         } else {
-          $crumbs='Без категории / ';
+          $crumbs='Без категории';
         }
 
       } else {
-        $crumbs='Без категории / ';
+        $crumbs='Без категории';
       }
     }
-    $crumbs.=$product['name'];
+    //$crumbs.=$product['name'];
 
     // блок описания
     $description= ($product['description']!='') ? '<span itemprop="description">'.$product['description'].'</span>' : '<meta itemprop="description" content="нет описания">';

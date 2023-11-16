@@ -103,7 +103,7 @@ if ($go->affectedRows()==1) {
       $ProductCountInCart = $_SESSION['cart'][$product['ID']]['count'];
     }
   } else {
-    $buttonText='Взять за образец';
+    $buttonText='Заказать';
     $prdincart = 0;
   }
 

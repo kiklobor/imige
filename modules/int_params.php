@@ -314,7 +314,7 @@ if (!isset($h1_group_name)) $h1_group_name = "";
         foreach($cells as $cellval)
                 //if(isset($cells[$i])) {
                 if(TRUE) {
-                    $buttonText= isset($_SESSION['cart'][$cellval['id']]) ? 'Заказано!' : 'Взять за образец';
+                    $buttonText= isset($_SESSION['cart'][$cellval['id']]) ? 'Заказано!' : 'Заказать';
 										$prdincart = isset($_SESSION['cart'][$cellval['id']]) ? 1 : 0;
 
                     $cell= (array_key_exists('user_in', $_SESSION) AND $_SESSION['user_in']) ? $cellTemplateLogged : $cellTemplateUnlogged;

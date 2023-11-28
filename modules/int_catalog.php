@@ -449,3 +449,4 @@ function formatarticle($article) {
   }
   return $ahtml;
 }
+?>

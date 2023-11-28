@@ -59,7 +59,7 @@ $menu = build_tree($catarr,0);
 <a href="/">Главная</a> / Категории
 </div>
 
-<div class="col-12 col-md-3 order-1 order-md-2 p-0">
+<div id="optionsBlock" class="col-12 col-md-3 order-1 order-md-2 p-0">
     <div class="optionsSticky position-sticky">
 	<div class="optionsText">ФИЛЬТРЫ</div>
 	<div class="optionsList">

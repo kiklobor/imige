@@ -343,7 +343,7 @@ if (!isset($h1_group_name)) $h1_group_name = "";
 <a href="/">Главная</a> / <a href="/catalog/">Категории</a><!--mcatalog?target=products--> / <?=$link?>
 </div>
 
-<div class="col-12 col-md-3 order-1 order-md-2 p-0">
+<div id="optionsBlock" class="col-12 col-md-3 order-1 order-md-2 p-0">
     <div class="optionsSticky position-sticky">
 	<div class="optionsText">ФИЛЬТРЫ</div>
 	<div class="optionsList">

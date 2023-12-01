@@ -14,7 +14,7 @@
         <h1 itemprop="name"><?=$product['name']?></h1>
         <?=$description?><br>
         <?=$props?>
-        Артикул: <b><?=$product['code']?></b><br>
+        Артикул: <b><?=$code?></b><br>
         <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
         <span itemprop="price">
         <?=$pricesBlock?>

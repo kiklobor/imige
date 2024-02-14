@@ -1,7 +1,16 @@
 <?
 //промежуточная страница для обработки заказа
+//echo 'paymentsOn: ';var_dump($paymentsOn);
 if ($page==='orderProcess') {
-	$url='/orderComplete?order='.$_GET['order'];
+	//var_dump($_SESSION['paymentsOn']);
+	if (!isset($_SESSION["paymentsOn"])) {
+    $_SESSION["paymentsOn"] = false;
+}
+
+	if ($_SESSION['paymentsOn'] === true) 
+		$url='/payment?action=start&order='.$_GET['order'];
+	else 
+		$url='/orderComplete?order='.$_GET['order'];
 	header('Location: '.$url);
 	}
 
@@ -292,7 +301,7 @@ foreach($delivery as $key=>$value) {
 	    }
 	}
 		$url='/customSuccess?id='.$callbackID;
-		//header('Location: '.$url);
+		header('Location: '.$url);
 		}
 }
 

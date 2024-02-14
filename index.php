@@ -56,7 +56,8 @@ else {
         case 'services':$page='services';break;
         case 'service':$page='service';break;
         case 'params':$page='params';break;
-		    case 'param':$page='param';break;
+		case 'param':$page='param';break;
+		case 'update_session':$page='update_session';break;
         default:$page='404';break;
     	/*
     	case("delivery"):require("modules/int_deliveryAndPayment.php");break;
@@ -148,7 +149,7 @@ else {
     //else $canonical='';
     }
 */
-
+//$GLOBALS['paymentsOn'];
 $GLOBALS['basiclink']=0;
 /*тут должна быть проверка, вызывающая окно логина, если незалогиненный пользователь пытается вызывать страницу для залогиненных*/
 
@@ -161,6 +162,7 @@ if ($page==='exit') {
 	unset($_SESSION['user_mail']);
 	unset($_SESSION['user_name']);
 	unset($_SESSION['user_id']);
+	unset($_SESSION['user_phone']);
 	$_SESSION['user_in']=false;
 	$url='/';
 	header('Location: '.$url);
@@ -474,8 +476,15 @@ switch($urlArr[1]) {
         $is404 = TRUE;
         break;
       }
+      /*
+      $productUrl=$urlArr[2];
+      $query="SELECT p.* FROM products p,groups g,subgroups sg WHERE p.parent=sg.uID AND sg.parent=g.uID AND g.ind=0 AND p.url=?s AND p.active=1 LIMIT 1";
+      $product=$go->getRow($query,$productUrl);
+      if (is_null($product) OR $product===FALSE) {  //OR $group['url'] != '') {
+        $is404 = TRUE;
+      }
+      /**/
     break;
-    //---------------- services
     case 'services':
       if (!($categoryservices->checkurlpath($urlArrf)) AND ($page == 'services')) {
         $is404 = TRUE;
@@ -501,36 +510,12 @@ switch($urlArr[1]) {
         $is404 = TRUE;
         break;
       }
+      //die('service');
+      // var_dump($is404);
+      // die($is404);
     break;
 	
-  //---------------- params
-    case 'params':
-      if (!($categoryparams->checkurlpath($urlArrf)) AND ($page == 'params')) {
-        $is404 = TRUE;
-      }
-      break;
-    case 'param':
-      if (count($urlArrf)>2) {
-      //if (count($urlArr)>4) {
-       $is404 = TRUE;
-       break;
-      }
-
-      $paramUrl=$urlArr[2];
-      $query="SELECT s.* FROM params s WHERE s.url=?s AND s.active=1 LIMIT 1";
-      $param=$go->getRow($query,$paramUrl);
-      if (is_null($param) OR $param===FALSE) {  //OR $group['url'] != '') {
-        $is404 = TRUE;
-        break;
-      }
-
-      //маразм, но на всякий случай
-      if (count($categoryparams->getcatbyuid($param['parent'])) == 0) {
-        $is404 = TRUE;
-        break;
-      }
-    break;	
-
+	
     //case 'sample':break;
 
     default:break;
@@ -586,7 +571,7 @@ switch($page) {
   case("services"):
    include_once(LROOT.'/modules/utils/url.php');
    break;
-  case("service"):
+   case("service"):
     include_once(LROOT.'/modules/utils/image.php');
     require("scripts/prg_service.php");
     break;
@@ -623,17 +608,16 @@ ob_start();
 <?=$meta?>
 <?=$canonical?>
 
-<!-- Google Tag Manager 
+<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WWHB3JH');</script>
- End Google Tag Manager -->
+<!-- End Google Tag Manager -->
 
 <link rel="shortcut icon" href="/favicon.ico">
-<!-- 20201202 4.3.1  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- 20201202 4.3.1  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 <script type="text/javascript" src="https://yastatic.net/jquery/2.2.3/jquery.min.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -644,11 +628,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="/styles/owl.theme.default.min.css">
 <script src="/scripts/owl.carousel.min.js"></script>
 
-<!-- integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<!-- 20201202 4.3.1  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
+<!-- integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" --><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- 20201202 4.3.1  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" --><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127638054-1"></script>
 <script>
@@ -797,6 +778,7 @@ switch($page) {
     break;
   case("service"):require("modules/int_service.php"); break;
   case("param"):require("modules/int_par.php"); break;
+  case("update_session"):require("modules/update_session.php"); break;
 
 	default:require("modules/int_main.php");break;
 	}
@@ -1165,7 +1147,7 @@ $(document).ready(function (){
 
 });
 </script>
-<!-- <script type="text/javascript" >
+<script type="text/javascript" >
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function() {
             try {
@@ -1191,8 +1173,8 @@ $(document).ready(function (){
             d.addEventListener("DOMContentLoaded", f, false);
         } else { f(); }
     })(document, window, "yandex_metrika_callbacks");
-</script> -->
-<!-- <noscript><div><img src="https://mc.yandex.ru/watch/48177671?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/48177671?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

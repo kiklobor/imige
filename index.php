@@ -1224,7 +1224,8 @@ $(document).ready(function (){
 <!-- /Yandex.Metrika counter -->
 <?php //var_dump(Timerw::finish());?>
 </body>
-</html><?php
+</html>
+<?php
 //Функционал отложенных функций
 $output = ob_get_contents();
 ob_end_clean(); 	//очищаем буфер
@@ -1249,3 +1250,4 @@ $replacements = array(
 $output = preg_replace($patterns, $replacements, $output);
 
 echo $output;
+?>

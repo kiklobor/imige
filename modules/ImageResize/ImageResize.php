@@ -80,7 +80,7 @@ class ImageResize
      * The quality of the target image.
      * @var int
      */
-    private $target_quality = 70;
+    private $target_quality = 60;
 
     /**
      * If the ratio of the target image should be fixed.

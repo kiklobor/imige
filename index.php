@@ -1178,7 +1178,7 @@ $(document).ready(function (){
 });
 </script>
 <!-- Yandex.Metrika counter -->
-<script async type="text/javascript" >
+<script type="text/javascript" >
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function() {
             try {

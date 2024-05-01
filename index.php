@@ -639,7 +639,7 @@ ob_start();
 <?=$canonical?>
 
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<script async>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -649,8 +649,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="shortcut icon" href="/favicon.ico">
 <!-- 20201202 4.3.1  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<script type="text/javascript" src="https://yastatic.net/jquery/2.2.3/jquery.min.js"></script>
-<script src='https://www.google.com/recaptcha/api.js'></script>
+<script type="text/javascript" async src="https://yastatic.net/jquery/2.2.3/jquery.min.js"></script>
+<script async src='https://www.google.com/recaptcha/api.js'></script>
 
 <link  href="/styles/fotorama.css" rel="stylesheet">
 <script src="/scripts/fotorama.js"></script>
@@ -670,9 +670,9 @@ gtag('config', 'UA-127638054-1');
 </script>
 -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script src="https://www.googletagmanager.com/gtag/js?id=UA-194280260-1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-194280260-1">
 </script>
-<script>
+<script async>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -684,7 +684,7 @@ gtag('config', 'UA-127638054-1');
 <meta name="yandex-verification" content="cd557ceb705f6c82" />
 
 <link href="/styles/main.css" rel="stylesheet" type="text/css">
-<script src="//code.jivosite.com/widget.js" jv-id="7por5QPLLn"></script>
+<script async src="//code.jivosite.com/widget.js" jv-id="7por5QPLLn"></script>
 
 </head>
 
@@ -1178,7 +1178,7 @@ $(document).ready(function (){
 });
 </script>
 <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
+<script async type="text/javascript" >
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function() {
             try {
@@ -1208,7 +1208,7 @@ $(document).ready(function (){
 <noscript><div><img src="https://mc.yandex.ru/watch/48177671?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- Yandex.Metrika counter -->
 <!-- Yandex.Metrika counter --> 
-<script type="text/javascript" >
+<script async type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");

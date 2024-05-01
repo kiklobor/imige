@@ -825,7 +825,7 @@ switch($page) {
 
 <div id="settings" style="display:none;" discountstatus="<?=$prc->discountLevel?>" basiclink="<?=$GLOBALS['basiclink']?>">
 </div>
-<script async>
+<script>
 $(document).ready(function (){
 	part1 = 'imige';
 	part2 = 'imige.ru';

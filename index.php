@@ -649,7 +649,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="shortcut icon" href="/favicon.ico">
 <!-- 20201202 4.3.1  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<script type="text/javascript" async src="https://yastatic.net/jquery/2.2.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://yastatic.net/jquery/2.2.3/jquery.min.js"></script>
 <script async src='https://www.google.com/recaptcha/api.js'></script>
 
 <link  href="/styles/fotorama.css" rel="stylesheet">
@@ -670,7 +670,7 @@ gtag('config', 'UA-127638054-1');
 </script>
 -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-194280260-1">
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-194280260-1">
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -684,7 +684,7 @@ gtag('config', 'UA-127638054-1');
 <meta name="yandex-verification" content="cd557ceb705f6c82" />
 
 <link href="/styles/main.css" rel="stylesheet" type="text/css">
-<script src="//code.jivosite.com/widget.js" jv-id="7por5QPLLn"></script>
+<script async src="//code.jivosite.com/widget.js" jv-id="7por5QPLLn"></script>
 
 </head>
 

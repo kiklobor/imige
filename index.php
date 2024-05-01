@@ -649,7 +649,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="shortcut icon" href="/favicon.ico">
 <!-- 20201202 4.3.1  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" --><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<script async type="text/javascript" src="https://yastatic.net/jquery/2.2.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://yastatic.net/jquery/2.2.3/jquery.min.js"></script>
 <script async src='https://www.google.com/recaptcha/api.js'></script>
 
 <link  href="/styles/fotorama.css" rel="stylesheet">

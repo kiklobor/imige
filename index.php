@@ -653,7 +653,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script async src='https://www.google.com/recaptcha/api.js'></script>
 
 <link  href="/styles/fotorama.css" rel="stylesheet">
-<script async src="/scripts/fotorama.js"></script>
+<script src="/scripts/fotorama.js"></script>
 <link rel="stylesheet" href="/styles/owl.carousel.min.css">
 <link rel="stylesheet" href="/styles/owl.theme.default.min.css">
 <script src="/scripts/owl.carousel.min.js"></script>

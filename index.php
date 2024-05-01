@@ -656,7 +656,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="/scripts/fotorama.js"></script>
 <link rel="stylesheet" href="/styles/owl.carousel.min.css">
 <link rel="stylesheet" href="/styles/owl.theme.default.min.css">
-<script async src="/scripts/owl.carousel.min.js"></script>
+<script src="/scripts/owl.carousel.min.js"></script>
 
 <!-- integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" --><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <!-- 20201202 4.3.1  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" --><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

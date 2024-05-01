@@ -672,7 +672,7 @@ gtag('config', 'UA-127638054-1');
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-194280260-1">
 </script>
-<script>
+<script async>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -684,7 +684,7 @@ gtag('config', 'UA-127638054-1');
 <meta name="yandex-verification" content="cd557ceb705f6c82" />
 
 <link href="/styles/main.css" rel="stylesheet" type="text/css">
-<script async src="//code.jivosite.com/widget.js" jv-id="7por5QPLLn"></script>
+<script src="//code.jivosite.com/widget.js" jv-id="7por5QPLLn"></script>
 
 </head>
 

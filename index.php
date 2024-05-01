@@ -684,7 +684,7 @@ gtag('config', 'UA-127638054-1');
 <meta name="yandex-verification" content="cd557ceb705f6c82" />
 
 <link href="/styles/main.css" rel="stylesheet" type="text/css">
-<script src="//code.jivosite.com/widget.js" jv-id="7por5QPLLn" async></script>
+<script async src="//code.jivosite.com/widget.js" jv-id="7por5QPLLn" async></script>
 
 </head>
 

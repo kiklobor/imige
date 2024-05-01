@@ -670,7 +670,7 @@ gtag('config', 'UA-127638054-1');
 </script>
 -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script src="https://www.googletagmanager.com/gtag/js?id=UA-194280260-1">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-194280260-1">
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];

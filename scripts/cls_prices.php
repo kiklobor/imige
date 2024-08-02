@@ -2,8 +2,8 @@
 class prices extends SafeMySQL{
     public $pricesD=array();
     public $prices=array();
-    public $l1=10000;
-    public $l2=50000;
+    public $l1=30000;
+    public $l2=60000;
     public $nvlf=0.95; // 95%, NO VAT LIMIT FACTOR
     public $s1=0; // стоимость корзины по рознице
     public $s2=0; // стоимость корзины по мелкому опту

@@ -205,7 +205,7 @@ abstract class YmlGeneratorDBS  {
         $engine->startElement('offer');
         $engine->writeAttribute('id', $id);
         $engine->writeAttribute('available', $available ? 'true' : 'false');
-        $engine->writeElement('sales_notes', "При заказе от 5000 рублей - доставка бесплатно.");
+        $engine->writeElement('sales_notes', "При заказе от 10000 рублей - доставка бесплатно.");
         foreach($data as $elm=>$val) {
             if (in_array($elm,$this->offerElements)) {
                 if (!is_array($val)) {

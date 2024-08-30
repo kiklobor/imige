@@ -34,7 +34,7 @@ class ImigeYmlGeneratorDBS extends YmlGeneratorDBS {
             'version'=>'7',
             'agency'=>'ООО "Имидж"',
             'email'=>'zakaz@imige.ru',
-            'delivery-options' => array('cost'=>550, 'days'=>'1-3', 'orderbefore'=>18),
+            'delivery-options' => array('cost'=>850, 'days'=>'1-3', 'orderbefore'=>18),
             'pickup-options' => array('cost'=>0, 'days'=>'1-3', 'orderbefore'=>18)
       );
     }
